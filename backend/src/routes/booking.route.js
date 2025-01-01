@@ -1,5 +1,5 @@
 import express from 'express';
-import { createBookings, deleteBooking, getBookings } from '../controllers/booking.controller.js';
+import { createBookings, deleteBooking, getBookings, updateBooking } from '../controllers/booking.controller.js';
 
 const router = express.Router();
 
@@ -10,9 +10,7 @@ router.post('/booking/add', createBookings);
 router.get('/bookings', getBookings);
 
 // To update a booking
-router.put('/booking/update/:id', (req, res) => {
-    res.send('You would be able to edit booking from here!');
-})
+router.put('/booking/update/:id', updateBooking);
 
 // To delete a booking
 router.post('/booking/delete/:id', deleteBooking );
