@@ -1,12 +1,21 @@
-import express, { json } from 'express';
+import express from 'express';
+import dotenv from 'dotenv';
 
-const app = express();
-const PORT = 4000;
+dotenv.config(); // for using env variables
 
-app.use(json());
+const app = express(); // initialized express app
+const PORT = process.env.PORT_NUMBER;
 
+
+// Using json parser
+app.use(express.json());
+
+// Routes 
 app.use('/api', (req, res) => {
     res.send('Hi');
 })
 
-app.listen(PORT, console.log(`Server started at ${PORT}`));
+// Server started at
+app.listen(PORT, () => {
+    console.log(`Server started at ${PORT}`)
+});
