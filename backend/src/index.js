@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import { connectDB } from './lib/db.js';
 
 dotenv.config(); // for using env variables
 
@@ -17,5 +18,6 @@ app.use('/api', (req, res) => {
 
 // Server started at
 app.listen(PORT, () => {
-    console.log(`Server started at ${PORT}`)
+    console.log(`Server started at ${PORT}`);
+    connectDB();
 });
