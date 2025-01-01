@@ -11,7 +11,7 @@ const schema = new mongoose.Schema(
             required: true
         },
         bookingDate: {
-            type: Date,
+            type: String,
             required: true
         },
         bookingSlot: {
@@ -22,4 +22,6 @@ const schema = new mongoose.Schema(
     { timestamps: true }
 )
 
-export const Booking = new mongoose.model("booking", schema); 
+const Booking = new mongoose.model("booking", schema); 
+
+export default Booking;
