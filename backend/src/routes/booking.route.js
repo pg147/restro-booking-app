@@ -1,11 +1,10 @@
 import express from 'express';
+import { createBookings } from '../controllers/booking.controller.js';
 
 const router = express.Router();
 
 // To create a booking
-router.post('/booking/add', (req, res) => {
-    res.send('You can book from here!');
-})
+router.post('/booking/add', createBookings);
 
 // To fetch bookings
 router.get('/bookings', (req, res) => {
