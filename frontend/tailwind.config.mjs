@@ -9,8 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary : "#F92E43",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        strokes: "#EDEDED",
+        subtitle: "#8A8A8A"
       },
       fontFamily: {
         light: ['var(--font-chesnaLight)'],        
