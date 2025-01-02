@@ -1,3 +1,4 @@
+import YourBookings from "@/components/YourBookings ";
 import { Sms } from "iconsax-react";
 import Image from "next/image";
 
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Greeting */}
-      <div className="flex gap-x-4 items-center justify-center w-fit h-fit border-[1.5px] border-strokes rounded-2xl p-6">
+      <div className="flex gap-x-4 items-center justify-center w-fit h-fit border-[1.75px] border-strokes rounded-2xl p-6">
         {/* Profile Photo */}
         <div className="h-fit w-fit bg-primary flex items-center justify-center rounded-full">
           <Image
@@ -16,7 +17,7 @@ export default function Home() {
             height={100}
             width={100}
             quality={100}
-            className="h-16 w-16"
+            className="h-14 w-14"
           />
         </div>
 
@@ -30,6 +31,10 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Your bookings */}
+      <div>
+        <YourBookings />
+      </div>
 
     </div>
   );
