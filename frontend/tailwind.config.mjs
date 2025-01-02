@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -11,6 +12,13 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        light: ['var(--font-chesnaLight)'],        
+        regular: ['var(--font-chesnaRegular)'],
+        medium: ['var(--font-chesnaMedium)'],
+        semibold: ['var(--font-chesnaSemibold)'],
+        bold: ['var(--font-chesnaBold)'],
+      }
     },
   },
   plugins: [],

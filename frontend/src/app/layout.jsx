@@ -1,14 +1,34 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const chesnaGroteskLight = localFont({
+  variable: "--font-chesnaLight",
+  src: './fonts/ChesnaGrotesk-Light.ttf',
+  weight: '200'
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const chesnaGroteskRegular = localFont({
+  variable: "--font-chesnaRegular",
+  src: './fonts/ChesnaGrotesk-Regular.ttf',
+  weight: '300'
+});
+
+const chesnaGroteskMedium = localFont({
+  variable: "--font-chesnaMedium",
+  src: './fonts/ChesnaGrotesk-Medium.ttf',
+  weight: '400'
+});
+
+const chesnaGroteskSemibold = localFont({
+  variable: "--font-chesnaSemibold",
+  src: './fonts/ChesnaGrotesk-Semibold.ttf',
+  weight: '500'
+});
+
+const chesnaGroteskBold = localFont({
+  variable: "--font-chesnaBold",
+  src: './fonts/ChesnaGrotesk-Bold.ttf',
+  weight: '600'
 });
 
 export const metadata = {
@@ -20,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${chesnaGroteskLight.variable} ${chesnaGroteskRegular.variable} ${chesnaGroteskMedium.variable} ${chesnaGroteskSemibold.variable} ${chesnaGroteskBold.variable}  antialiased`}
       >
         {children}
       </body>
