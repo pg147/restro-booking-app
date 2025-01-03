@@ -1,35 +1,11 @@
 import "./globals.css";
-import localFont from "next/font/local";
+import { DM_Sans } from "next/font/google";
 
-const chesnaGroteskLight = localFont({
-  variable: "--font-chesnaLight",
-  src: './fonts/ChesnaGrotesk-Light.ttf',
-  weight: '200'
-});
-
-const chesnaGroteskRegular = localFont({
-  variable: "--font-chesnaRegular",
-  src: './fonts/ChesnaGrotesk-Regular.ttf',
-  weight: '300'
-});
-
-const chesnaGroteskMedium = localFont({
-  variable: "--font-chesnaMedium",
-  src: './fonts/ChesnaGrotesk-Medium.ttf',
-  weight: '400'
-});
-
-const chesnaGroteskSemibold = localFont({
-  variable: "--font-chesnaSemibold",
-  src: './fonts/ChesnaGrotesk-Semibold.ttf',
-  weight: '500'
-});
-
-const chesnaGroteskBold = localFont({
-  variable: "--font-chesnaBold",
-  src: './fonts/ChesnaGrotesk-Bold.ttf',
-  weight: '600'
-});
+const dmSans = DM_Sans({
+  variable: '--font-dmSans',
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700']
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -40,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${chesnaGroteskLight.variable} ${chesnaGroteskRegular.variable} ${chesnaGroteskMedium.variable} ${chesnaGroteskSemibold.variable} ${chesnaGroteskBold.variable}  antialiased`}
+        className={`${dmSans.variable} font-dmSans antialiased`}
       >
         {children}
       </body>

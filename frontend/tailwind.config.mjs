@@ -16,11 +16,7 @@ export default {
         subtitle: "#8A8A8A"
       },
       fontFamily: {
-        light: ['var(--font-chesnaLight)'],        
-        regular: ['var(--font-chesnaRegular)'],
-        medium: ['var(--font-chesnaMedium)'],
-        semibold: ['var(--font-chesnaSemibold)'],
-        bold: ['var(--font-chesnaBold)'],
+        dmSans : ['var(--font-dmSans)']
       }
     },
   },
