@@ -30,7 +30,7 @@ export default function Calendar ({ value = new Date(), onChange }) {
     };
 
     return (
-        <div className="h-fit flex flex-col items-center border p-4 rounded-3xl">
+        <div className="h-fit w-[500px] flex flex-col items-center border p-4 rounded-3xl">
             {/* User Controls and Current Month */}
             <div className="w-full grid grid-cols-7 items-center justify-around">
                 {/* Change to Previous Year */}
