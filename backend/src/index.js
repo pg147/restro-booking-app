@@ -1,6 +1,7 @@
 // Dependencies
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 
 // Libs
 import { connectDB } from './lib/db.js';
@@ -15,6 +16,10 @@ const PORT = process.env.PORT_NUMBER;
 
 // Using json parser
 app.use(express.json());
+
+app.use(cors({
+    origin: 'http://localhost:3000',
+}))
 
 // Routes 
 app.use('/api', bookingRoutes);
