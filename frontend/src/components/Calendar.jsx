@@ -1,8 +1,15 @@
 "use client"
-import { add, differenceInDays, endOfMonth, format, setDate, startOfMonth, sub } from "date-fns";
-import Cell from "./Cell";
+
+// React Imports
 import { useState } from "react";
 
+// Dependency - DATE Fns 
+import { add, differenceInDays, endOfMonth, format, setDate, startOfMonth, sub } from "date-fns";
+
+// Cell Component
+import Cell from "./Cell";
+
+// Week days array
 const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export default function Calendar ({ value = new Date(), onChange }) {
