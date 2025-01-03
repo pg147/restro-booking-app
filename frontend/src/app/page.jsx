@@ -11,6 +11,7 @@ import { Minus, User, Add, Calendar2, Clock } from "iconsax-react";
 
 // Calendar Component
 import Calendar from "@/components/Calendar ";
+import axios from "axios";
 
 const primaryColor = "#F92E43";
 
@@ -82,14 +83,22 @@ export default function Home() {
     setFormData(prev => ({ ...prev, guestCount: prev.guestCount + 1 }));
   }
 
-  const handleSubmitBooking = () => {
+  const handleSubmitBooking = async () => {
     const userFullName = `${formData.firstName} ${formData.lastName}`.trim();
 
-    const userData = {
+    const bookingData = {
       name: userFullName,
       guestsCount: formData.guestCount,
       bookingDate: format(currentDate, 'dd LLLL yyyy'),
       bookingSlot: formData.timeSlot,
+    };
+
+    try {
+      const response = await axios.post('http://localhost:3001/api/booking/add', bookingData);
+      const responseData = response.data;
+      console.log(responseData);
+    } catch (error) {
+      console.log("Error creating booking : ", error.message);
     }
   }
 
