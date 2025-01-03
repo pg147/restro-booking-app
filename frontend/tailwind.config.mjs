@@ -13,7 +13,8 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         strokes: "#EDEDED",
-        subtitle: "#8A8A8A"
+        subtitle: "#8A8A8A",
+        tile: "#F8F8F8"
       },
       fontFamily: {
         dmSans : ['var(--font-dmSans)']
